@@ -25,19 +25,18 @@ header {
     justify-content: flex-end;
 }
 
-#drop,
-#zone {
+.logo {
     font-size: 2.1rem;
     background-color: black;
     padding: 4px 14px 4px 24px;
     align-self: flex-end;
 }
 
-#drop {
+.drop-text {
     margin-right: 20px;
 }
 
-#zone {
+.zone-text {
     margin: 12px 0 0 42px;
 }
 
@@ -61,6 +60,7 @@ header {
     font-size: 3rem;
     font-weight: 900;
     text-align: center;
+    letter-spacing: 12px;
 }
 
 .column2 h2 {
@@ -84,10 +84,7 @@ header {
     letter-spacing: 10px;
 }
 
-.days-container,
-.hours-container,
-.mins-container,
-.secs-container {
+.units-container {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -107,8 +104,8 @@ header {
     background-color: black;
     color: #fff;
     font-family: 'Rozha One', serif;
-    padding: 0.2em 0.4em;
-    width: 0.6em;
+    padding: 0.15em 0em;
+    width: 72px;
     display: inline-block;
     margin-right: 6px;
 }
@@ -116,7 +113,7 @@ header {
 
 /*  Responsive design*/
 
-@media only screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .bg-image {
         background-position: top left;
     }
@@ -128,8 +125,7 @@ header {
         flex-direction: column;
         height: calc(100vh - 142px);
     }
-    #drop,
-    #zone {
+    .logo {
         font-size: 1.8rem;
         padding: 4px 14px 4px 16px;
     }
@@ -151,12 +147,9 @@ header {
     }
     .column2 h2 {
         font-size: 1.2rem;
-        letter-spacing: 2px;
+        letter-spacing: 2px;       
     }
-    .days-container,
-    .hours-container,
-    .mins-container,
-    .secs-container {
+    .units-container {
         justify-content: space-between;
     }
     .days span,
@@ -164,8 +157,9 @@ header {
     .mins span,
     .secs span {
         font-size: 1.3rem;
-        padding: 8px;
+        padding: 6px 8px;
         margin-right: 0;
+        width: 16px;
     }
     .timer-container label {
         font-size: 1rem;
